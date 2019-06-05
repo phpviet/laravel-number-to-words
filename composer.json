@@ -1,0 +1,49 @@
+{
+    "name": "phpviet/laravel-number-to-words",
+    "description": "Laravel number to words hổ trợ chuyển đổi số sang chữ số Tiếng Việt.",
+    "keywords": [
+        "phpviet",
+        "laravel-number-to-words"
+    ],
+    "homepage": "https://github.com/phpviet/laravel-number-to-words",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vuong Xuong Minh",
+            "email": "vuongxuongminh@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "phpviet/number-to-words": "^1.0",
+        "illuminate/support": "^5.7"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.7",
+        "phpunit/phpunit": "~7.5",
+        "scrutinizer/ocular": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPViet\\Laravel\\NumberToWords\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPViet\\Laravel\\NumberToWords\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "PHPViet\\Laravel\\NumberToWords\\ServiceProvider"
+            ]
+        }
+	}
+}
