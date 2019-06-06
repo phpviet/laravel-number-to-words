@@ -169,6 +169,7 @@ class MyDictionary extends Dictionary {
     }
 
 }
+```
 
 Sau đó khai báo vào config:
 
