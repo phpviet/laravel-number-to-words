@@ -48,7 +48,7 @@
         },
         "laravel": {
             "aliases": {
-                "N2W": "PHPViet\\Laravel\\NumberToWords\\N2W"
+                "N2W": "PHPViet\\Laravel\\NumberToWords\\N2WFacade"
             },
             "providers": [
                 "PHPViet\\Laravel\\NumberToWords\\ServiceProvider"
