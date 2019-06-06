@@ -34,7 +34,7 @@ class N2W extends Facade
      *
      * @var array|DictionaryInterface[]
      */
-    private static $dictionaries = [];
+    protected static $dictionaries = [];
 
     /**
      * @inheritDoc
