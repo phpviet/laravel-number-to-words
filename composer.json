@@ -24,6 +24,9 @@
         "scrutinizer/ocular": "^1.5"
     },
     "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
         "psr-4": {
             "PHPViet\\Laravel\\NumberToWords\\": "src"
         }
@@ -32,6 +35,9 @@
         "psr-4": {
             "PHPViet\\Laravel\\NumberToWords\\Tests\\": "tests"
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
     },
     "config": {
         "sort-packages": true
