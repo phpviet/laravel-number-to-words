@@ -47,6 +47,9 @@
             "dev-master": "1.0-dev"
         },
         "laravel": {
+            "aliases": {
+                "N2W": "PHPViet\\Laravel\\NumberToWords\\N2W"
+            },
             "providers": [
                 "PHPViet\\Laravel\\NumberToWords\\ServiceProvider"
             ]
