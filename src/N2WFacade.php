@@ -29,7 +29,7 @@ class N2WFacade extends Facade
     public static $dictionary;
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected static function getFacadeAccessor(): Transformer
     {
@@ -57,12 +57,10 @@ class N2WFacade extends Facade
      */
     protected static function makeDictionary(string $dictionary): DictionaryInterface
     {
-        if (!$dictionaryClass = config("n2w.dictionaries.{$dictionary}")) {
+        if (! $dictionaryClass = config("n2w.dictionaries.{$dictionary}")) {
             throw new InvalidArgumentException(sprintf('Dictionary (%s) is not defined!', $dictionary));
         }
 
         return app()->make($dictionaryClass);
     }
-
-
 }

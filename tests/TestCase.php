@@ -18,7 +18,6 @@ use PHPViet\Laravel\NumberToWords\ServiceProvider;
  */
 class TestCase extends BaseTestCase
 {
-
     protected function getPackageProviders($app)
     {
         return [ServiceProvider::class];
@@ -28,7 +27,6 @@ class TestCase extends BaseTestCase
     {
         return ['N2W' => N2WFacade::class];
     }
-
 
     public function dataProvider(): array
     {

@@ -20,32 +20,30 @@ use Illuminate\Support\ServiceProvider as BaseServiceProvider;
  */
 class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
 {
-
     public $bindings = [
-        'n2w' => Transformer::class
+        'n2w' => Transformer::class,
     ];
 
     public $singletons = [
         Dictionary::class => Dictionary::class,
         DictionaryInterface::class => Dictionary::class,
-        SouthDictionary::class => SouthDictionary::class
+        SouthDictionary::class => SouthDictionary::class,
     ];
 
     public function boot(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/n2w.php' => config_path('n2w.php'),
+            __DIR__.'/../config/n2w.php' => config_path('n2w.php'),
         ], 'config');
     }
 
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/n2w.php', 'n2w');
+        $this->mergeConfigFrom(__DIR__.'/../config/n2w.php', 'n2w');
     }
 
     public function provides(): array
     {
         return ['n2w'];
     }
-
 }

@@ -22,7 +22,6 @@ class ChangeDictionaryTest extends TestCase
         $this->assertEquals($expect, n2w($number, 'south'));
     }
 
-
     public function dataProvider(): array
     {
         return [
@@ -128,5 +127,4 @@ class ChangeDictionaryTest extends TestCase
             ['sáu trăm năm mươi ngàn sáu trăm bảy mươi ba', 650673],
         ];
     }
-
 }

@@ -2,7 +2,7 @@
 
 use PHPViet\Laravel\NumberToWords\N2WFacade;
 
-if (!function_exists('n2w')) {
+if (! function_exists('n2w')) {
 
     /**
      * Hàm hổ trợ chuyển đổi số sang chữ số.
@@ -20,10 +20,9 @@ if (!function_exists('n2w')) {
 
         return $result;
     }
-
 }
 
-if (!function_exists('n2c')) {
+if (! function_exists('n2c')) {
 
     /**
      * Hàm hổ trợ chuyển đổi số sang tiền tệ.
@@ -42,5 +41,4 @@ if (!function_exists('n2c')) {
 
         return $result;
     }
-
 }
