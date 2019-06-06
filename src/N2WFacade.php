@@ -6,10 +6,9 @@
  * @license [MIT](https://opensource.org/licenses/MIT)
  */
 
-namespace PHPViet\Laravel\NumberToWords\Facades;
+namespace PHPViet\Laravel\NumberToWords;
 
 use InvalidArgumentException;
-use PHPViet\NumberToWords\Transformer;
 use Illuminate\Support\Facades\Facade;
 use PHPViet\NumberToWords\DictionaryInterface;
 
@@ -20,7 +19,7 @@ use PHPViet\NumberToWords\DictionaryInterface;
  * @author Vuong Minh <vuongxuongminh@gmail.com>
  * @since 1.0.0
  */
-class N2W extends Facade
+class N2WFacade extends Facade
 {
     /**
      * Từ điển hiện tại.
@@ -30,29 +29,22 @@ class N2W extends Facade
     public static $dictionary;
 
     /**
-     * Cache data của các từ điển.
-     *
-     * @var array|DictionaryInterface[]
-     */
-    protected static $dictionaries = [];
-
-    /**
      * @inheritDoc
      */
     protected static function getFacadeAccessor(): Transformer
     {
         $dictionary = static::$dictionary ?? static::getDefaultDictionary();
-        $dictionary = static::getDictionaryInstance($dictionary);
+        $dictionary = static::makeDictionary($dictionary);
 
-        return app('n2w', [$dictionary]);
+        return app('n2w', compact('dictionary'));
     }
 
     /**
      * Trả về từ điển mặc định trong config.
      *
-     * @return DictionaryInterface
+     * @return string
      */
-    public static function getDefaultDictionary(): DictionaryInterface
+    protected static function getDefaultDictionary(): string
     {
         return config('n2w.defaults.dictionary');
     }
@@ -63,17 +55,13 @@ class N2W extends Facade
      * @param string $dictionary
      * @return DictionaryInterface
      */
-    protected static function getDictionaryInstance(string $dictionary): DictionaryInterface
+    protected static function makeDictionary(string $dictionary): DictionaryInterface
     {
         if (!$dictionaryClass = config("n2w.dictionaries.{$dictionary}")) {
             throw new InvalidArgumentException(sprintf('Dictionary (%s) is not defined!', $dictionary));
         }
 
-        if (!isset(static::$dictionaries[$dictionaryClass])) {
-            return static::$dictionaries[$dictionaryClass] = app()->make($dictionaryClass);
-        }
-
-        return static::$dictionaries[$dictionaryClass];
+        return app()->make($dictionaryClass);
     }
 
 

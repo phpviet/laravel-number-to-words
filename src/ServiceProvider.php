@@ -8,7 +8,9 @@
 
 namespace PHPViet\Laravel\NumberToWords;
 
-use PHPViet\NumberToWords\Transformer;
+use PHPViet\NumberToWords\Dictionary;
+use PHPViet\NumberToWords\SouthDictionary;
+use PHPViet\NumberToWords\DictionaryInterface;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
@@ -21,6 +23,12 @@ class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
 
     public $bindings = [
         'n2w' => Transformer::class
+    ];
+
+    public $singletons = [
+        Dictionary::class => Dictionary::class,
+        DictionaryInterface::class => Dictionary::class,
+        SouthDictionary::class => SouthDictionary::class
     ];
 
     public function boot(): void
