@@ -16,7 +16,6 @@ use N2W;
  */
 class FacadeTest extends TestCase
 {
-
     /**
      * @dataProvider dataProvider
      */
@@ -32,5 +31,4 @@ class FacadeTest extends TestCase
     {
         $this->assertEquals($expect, N2W::toCurrency($number));
     }
-
 }

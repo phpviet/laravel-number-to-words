@@ -7,17 +7,17 @@
  */
 
 return [
-    /**
+    /*
      * Cấu hình từ điển mặc định theo chuẩn chung của cả nước
      */
     'defaults' => [
         'dictionary' => 'standard',
     ],
     'dictionaries' => [
-        /**
+        /*
          * Cấu hình các từ điển custom theo ý bạn.
          */
         'standard' => PHPViet\NumberToWords\Dictionary::class,
-        'south' => PHPViet\NumberToWords\SouthDictionary::class
-    ]
+        'south' => PHPViet\NumberToWords\SouthDictionary::class,
+    ],
 ];

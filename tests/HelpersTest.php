@@ -14,13 +14,12 @@ namespace PHPViet\Laravel\NumberToWords\Tests;
  */
 class HelpersTest extends TestCase
 {
-
     /**
      * @dataProvider dataProvider
      */
     public function testTransform($expect, $number)
     {
-        $this->assertEquals($expect,n2w($number));
+        $this->assertEquals($expect, n2w($number));
     }
 
     /**
@@ -30,5 +29,4 @@ class HelpersTest extends TestCase
     {
         $this->assertEquals($expect, n2c($number));
     }
-
 }

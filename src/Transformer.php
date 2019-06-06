@@ -17,7 +17,5 @@ use PHPViet\NumberToWords\Transformer as BaseTransformer;
  */
 class Transformer extends BaseTransformer
 {
-
     use Macroable;
-
 }
