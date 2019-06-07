@@ -95,13 +95,13 @@ n2c(9492.15, ['đô', 'xen']);
 
 > Nếu như bạn cảm thấy cách đọc ở trên ổn rồi thì hãy bỏ qua bước này.
 
-Đầu tiên để thay đổi cách đọc số bạn publish file cấu hình thông qua câu lệnh:
+Đầu tiên để thay đổi cách đọc số bạn cần phải publish file cấu hình thông qua câu lệnh:
 
 ```php
 php artisan vendor:publish --provider="PHPViet\Laravel\NumberToWords\ServiceProvider" --tag="config"
 ```
 
-Sau khi publish xong ta sẽ có được file config `config/n2w.php` nhu sau:
+Sau khi publish xong ta sẽ có được file config `config/n2w.php` như sau:
 
 ```php
 return [
@@ -136,7 +136,7 @@ N2W::toWords(1000);
  // hai mươi tư => hai mươi bốn
 N2W::toWords(24);
 
-// một trăm hai mươi tư nghìn không trăm linh một => một trăm hai mươi bốn ngàn không trăm lẻ một
+// một trăm hai mươi tư nghìn không trăm linh một đồng => một trăm hai mươi bốn ngàn không trăm lẻ một đồng
 N2W::toCurrency(124001);
 ```
 
