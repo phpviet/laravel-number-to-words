@@ -144,10 +144,10 @@ hoặc bạn muốn sử dụng linh động hơn thì hãy chỉ định từ �
 
 ```php
 // một trăm hai mươi tư nghìn không trăm linh một
-n2c(124001);
+n2w(124001);
 
 // một trăm hai mươi bốn ngàn không trăm lẻ một
-n2c(124001, 'south');
+n2w(124001, 'south');
 ```
 
 Nếu như bạn muốn thay đổi cách đọc theo ý bạn thì hãy tạo một lớp `Dictionary` kế thừa
