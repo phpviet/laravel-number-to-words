@@ -8,11 +8,11 @@
 
 namespace PHPViet\Laravel\NumberToWords;
 
-use PHPViet\NumberToWords\Dictionary;
-use PHPViet\NumberToWords\SouthDictionary;
-use PHPViet\NumberToWords\DictionaryInterface;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
+use PHPViet\NumberToWords\Dictionary;
+use PHPViet\NumberToWords\DictionaryInterface;
+use PHPViet\NumberToWords\SouthDictionary;
 
 /**
  * @author Vuong Minh <vuongxuongminh@gmail.com>

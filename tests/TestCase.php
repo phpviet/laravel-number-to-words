@@ -8,8 +8,8 @@
 
 namespace PHPViet\Laravel\NumberToWords\Tests;
 
-use PHPViet\Laravel\NumberToWords\N2WFacade;
 use Orchestra\Testbench\TestCase as BaseTestCase;
+use PHPViet\Laravel\NumberToWords\N2WFacade;
 use PHPViet\Laravel\NumberToWords\ServiceProvider;
 
 /**
