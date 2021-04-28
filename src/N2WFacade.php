@@ -8,8 +8,8 @@
 
 namespace PHPViet\Laravel\NumberToWords;
 
-use InvalidArgumentException;
 use Illuminate\Support\Facades\Facade;
+use InvalidArgumentException;
 use PHPViet\NumberToWords\DictionaryInterface;
 
 /**
