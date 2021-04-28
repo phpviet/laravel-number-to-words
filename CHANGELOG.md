@@ -1,3 +1,4 @@
-# Changelog
+2.0.0
+-----------------
 
-Tất cả lịch sử tiến trình phát triển thư viện
++ Bump Laravel to version 8.x
