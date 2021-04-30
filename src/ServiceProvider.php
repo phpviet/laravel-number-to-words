@@ -19,6 +19,10 @@ use PHPViet\NumberToWords\SouthDictionary;
  */
 class ServiceProvider extends BaseServiceProvider
 {
+    public $bindings = [
+        'n2w' => Transformer::class,
+    ];
+
     public $singletons = [
         Dictionary::class => Dictionary::class,
         DictionaryInterface::class => Dictionary::class,
