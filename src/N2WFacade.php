@@ -11,7 +11,6 @@ namespace PHPViet\Laravel\NumberToWords;
 use Illuminate\Support\Facades\Facade;
 use InvalidArgumentException;
 use PHPViet\NumberToWords\DictionaryInterface;
-use LogicException;
 
 /**
  * @method static string toWords($number)
@@ -34,8 +33,6 @@ class N2WFacade extends Facade
      */
     protected static function getFacadeAccessor(): Transformer
     {
-        static::checkConfigIsPublished();
-
         $dictionary = static::$dictionary ?? static::getDefaultDictionary();
         $dictionary = static::makeDictionary($dictionary);
 
@@ -65,18 +62,5 @@ class N2WFacade extends Facade
         }
 
         return app()->make($dictionaryClass);
-    }
-
-    /**
-     * Throw an Exception when the config is not exist
-     * Please run: php artisan vendor:publish --provider="PHPViet\Laravel\NumberToWords\ServiceProvider" --tag="config"
-     *
-     * @throws LogicException
-     */
-    protected static function checkConfigIsPublished()
-    {
-        if (!config()->has('n2w')) {
-            throw new LogicException("The config file is not found. You must publish the config before using it!");
-        }
     }
 }
