@@ -15,7 +15,7 @@
     ],
     "require": {
         "phpviet/number-to-words": "^1.2",
-        "illuminate/support": "^8.39"
+        "illuminate/support": ">6"
     },
     "require-dev": {
         "orchestra/testbench": "^6.17"
