@@ -8,7 +8,6 @@
 
 namespace PHPViet\Laravel\NumberToWords;
 
-use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use PHPViet\NumberToWords\Dictionary;
 use PHPViet\NumberToWords\DictionaryInterface;
@@ -18,7 +17,7 @@ use PHPViet\NumberToWords\SouthDictionary;
  * @author Vuong Minh <vuongxuongminh@gmail.com>
  * @since 1.0.0
  */
-class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
+class ServiceProvider extends BaseServiceProvider
 {
     public $bindings = [
         'n2w' => Transformer::class,
@@ -40,10 +39,5 @@ class ServiceProvider extends BaseServiceProvider implements DeferrableProvider
     public function register(): void
     {
         $this->mergeConfigFrom(__DIR__.'/../config/n2w.php', 'n2w');
-    }
-
-    public function provides(): array
-    {
-        return ['n2w'];
     }
 }

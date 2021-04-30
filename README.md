@@ -207,6 +207,6 @@ N2W::toWords(15);
 
 ## Dành cho nhà phát triển
 
-Nếu như bạn cảm thấy extension còn thiếu sót hoặc sai sót và bạn muốn đóng góp để phát triển chung, 
-chúng tôi rất hoan nghênh! Hãy tạo các `issue` để đóng góp ý tưởng cho phiên bản kế tiếp 
+Nếu như bạn cảm thấy extension còn thiếu sót hoặc sai sót và bạn muốn đóng góp để phát triển chung,
+chúng tôi rất hoan nghênh! Hãy tạo các `issue` để đóng góp ý tưởng cho phiên bản kế tiếp
 hoặc tạo `PR` để đóng góp. Cảm ơn!
