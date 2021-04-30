@@ -26,6 +26,12 @@ Cài đặt Laravel Number To Words thông qua [Composer](https://getcomposer.or
 composer require phpviet/laravel-number-to-words
 ```
 
+Publish file cấu hình thông qua câu lệnh:
+
+```php
+php artisan vendor:publish --provider="PHPViet\Laravel\NumberToWords\ServiceProvider" --tag="config"
+```
+
 ## Cách sử dụng
 
 ### Các tính năng của extension:
@@ -99,13 +105,7 @@ n2c(9492.15, ['đô', 'xen']);
 
 > Nếu như bạn cảm thấy cách đọc ở trên ổn rồi thì hãy bỏ qua bước này.
 
-Đầu tiên để thay đổi cách đọc số bạn cần phải publish file cấu hình thông qua câu lệnh:
-
-```php
-php artisan vendor:publish --provider="PHPViet\Laravel\NumberToWords\ServiceProvider" --tag="config"
-```
-
-Sau khi publish xong ta sẽ có được file config `config/n2w.php` như sau:
+Đầu tiên, bạn mở file config `config/n2w.php` như sau:
 
 ```php
 return [
